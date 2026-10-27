@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="183.2" height="46" viewBox="0 0 183.2 46" role="img" aria-labelledby="title">
+<title id="title">Stack Overflow</title>
+<style>
+  .border { fill: none; stroke: #d4d4d4; }
+  .logo { fill: #404040; }
+  .label { fill: #171717; font: 13px Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+  @media (prefers-color-scheme: dark) {
+    .border { stroke: #404040; } .logo { fill: #d4d4d4; } .label { fill: #d4d4d4; }
+  }
+</style>
+<rect x=".5" y=".5" width="182.2" height="45" rx="8" class="border"/>
+<svg x="20" y="12" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><mask id="contact-icon" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22" style="mask-type:alpha"><image width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+U3RhY2sgT3ZlcmZsb3c8L3RpdGxlPjxwYXRoIGQ9Ik0xNS43MjUgMGwtMS43MiAxLjI3NyA2LjM5IDguNTg4IDEuNzE2LTEuMjc3TDE1LjcyNSAwem0tMy45NCAzLjQxOGwtMS4zNjkgMS42NDQgOC4yMjUgNi44NSAxLjM2OS0xLjY0NC04LjIyNS02Ljg1em0tMy4xNSA0LjQ2NWwtLjkwNSAxLjk0IDkuNzAyIDQuNTE3LjkwNC0xLjk0LTkuNzAxLTQuNTE3em0tMS44NSA0Ljg2bC0uNDQgMi4wOTMgMTAuNDczIDIuMjAxLjQ0LTIuMDkyLTEwLjQ3My0yLjIwM3pNMS44OSAxNS40N1YyNGgxOS4xOXYtOC41M2gtMi4xMzN2Ni4zOTdINC4wMjF2LTYuMzk2SDEuODl6bTQuMjY1IDIuMTMzdjIuMTNoMTAuNjZ2LTIuMTNINi4xNTRaIi8+PC9zdmc+" preserveAspectRatio="xMidYMid meet"/></mask></defs><rect width="22" height="22" class="logo" mask="url(#contact-icon)"/></svg>
+<text x="54" y="27.16" class="label">Stack Overflow</text>
+</svg>

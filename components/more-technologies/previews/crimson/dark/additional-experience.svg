@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="184" viewBox="0 0 900 184" role="img" aria-labelledby="title desc">
+<rect width="100%" height="100%" fill="#0d1117"/>
+<title id="title">Other tools and technologies — examples</title>
+<desc id="desc">OTHER LANGUAGES: C, C#, Bash, JavaScript, TypeScript. WEB &amp; PLATFORMS: HTML, CSS, Node.js. DATA &amp; INTERFACES: MongoDB, MySQL, SQLite, SQL, REST, OpenAPI, Swagger, WebSocket, gRPC. SYSTEMS &amp; NETWORKING: Docker Compose, nginx, SSH, systemd, Nmap, Wireshark.</desc>
+<style>
+  text { font-family: Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+
+  .title { fill: #b91c1c; font-size: 12px; }
+  .body { fill: #171717; font-size: 12px; }
+  .muted { fill: #626262; font-size: 11px; }
+  .tool { fill: #b91c1c; font-size: 12px; }
+  .category { fill: #626262; font-size: 11px; }
+  .label { fill: #171717; font-size: 14px; }
+  .notes { fill: #626262; font-size: 12px; }
+  .logo { fill: #b91c1c; }
+  .border, .divider { stroke: #d4d4d4; }
+  @media all {
+  .title { fill: #f87171; }
+  .body { fill: #d4d4d4; }
+  .muted { fill: #a3a3a3; }
+  .tool { fill: #f87171; }
+  .category { fill: #a3a3a3; }
+  .label { fill: #d4d4d4; }
+  .notes { fill: #a3a3a3; }
+  .logo { fill: #f87171; }
+  .border, .divider { stroke: #404040; }
+  }
+</style>
+<g transform="translate(0 0)">
+<rect x=".5" y=".5" width="441" height="73" rx="8" fill="none" class="border"/>
+<text x="20" y="27" class="title">01 / OTHER LANGUAGES</text>
+<text x="20" y="52" class="body">C / C# / Bash / JavaScript / TypeScript</text>
+</g>
+<g transform="translate(458 0)">
+<rect x=".5" y=".5" width="441" height="73" rx="8" fill="none" class="border"/>
+<text x="20" y="27" class="title">02 / WEB &amp; PLATFORMS</text>
+<text x="20" y="52" class="body">HTML / CSS / Node.js</text>
+</g>
+<g transform="translate(0 90)">
+<rect x=".5" y=".5" width="441" height="93" rx="8" fill="none" class="border"/>
+<text x="20" y="27" class="title">03 / DATA &amp; INTERFACES</text>
+<text x="20" y="52" class="body">MongoDB / MySQL / SQLite / SQL / REST / OpenAPI /</text>
+<text x="20" y="72" class="body">Swagger / WebSocket / gRPC</text>
+</g>
+<g transform="translate(458 90)">
+<rect x=".5" y=".5" width="441" height="93" rx="8" fill="none" class="border"/>
+<text x="20" y="27" class="title">04 / SYSTEMS &amp; NETWORKING</text>
+<text x="20" y="52" class="body">Docker Compose / nginx / SSH / systemd / Nmap /</text>
+<text x="20" y="72" class="body">Wireshark</text>
+</g>
+</svg>

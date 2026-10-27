@@ -1,0 +1,94 @@
+{
+  "title": "Example backend stack",
+  "groups": [
+    {
+      "label": "BACKEND",
+      "items": [
+        {
+          "label": "Java",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/java/java-plain.svg"
+        },
+        {
+          "label": "Spring Boot",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/springboot.svg"
+        },
+        {
+          "label": "Jakarta EE (Java EE)",
+          "icon": "https://raw.githubusercontent.com/jakartaee/jakarta.ee/e56c7e95991a80a3d4dbece1ffc867ae93ed542c/static/images/jakarta/jakarta-ee-logo.svg"
+        },
+        {
+          "label": "Hibernate",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/hibernate.svg"
+        }
+      ],
+      "notes": [
+        "Web APIs / authentication / persistence",
+        "JUnit / Mockito / Testcontainers"
+      ]
+    },
+    {
+      "label": "BUILD & VERSIONING",
+      "items": [
+        {
+          "label": "Maven",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/maven/maven-plain.svg"
+        },
+        {
+          "label": "Gradle",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/gradle/gradle-original.svg"
+        },
+        {
+          "label": "Git",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/git/git-plain.svg"
+        }
+      ]
+    },
+    {
+      "label": "DATA & MESSAGING",
+      "items": [
+        {
+          "label": "PostgreSQL",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/postgresql/postgresql-plain.svg"
+        },
+        {
+          "label": "Redis",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/redis/redis-plain.svg"
+        },
+        {
+          "label": "Kafka",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/apachekafka/apachekafka-original.svg"
+        },
+        {
+          "label": "RabbitMQ",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/rabbitmq/rabbitmq-original.svg"
+        }
+      ],
+      "notes": [
+        "Migrations: Liquibase",
+        "Integration: Spring Kafka / Spring AMQP / gRPC Java"
+      ]
+    },
+    {
+      "label": "DELIVERY",
+      "items": [
+        {
+          "label": "Docker",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/docker/docker-plain.svg"
+        },
+        {
+          "label": "Kubernetes",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/kubernetes/kubernetes-plain.svg"
+        },
+        {
+          "label": "Terraform",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/terraform/terraform-plain.svg"
+        },
+        {
+          "label": "GitHub Actions",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/githubactions/githubactions-plain.svg"
+        }
+      ]
+    }
+  ],
+  "iconStyle": "monochrome"
+}

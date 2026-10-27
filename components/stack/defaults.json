@@ -1,0 +1,14 @@
+{
+  "output": "assets/stack.svg",
+  "layout": {
+    "top": 12,
+    "maxRowWidth": 800,
+    "dividerInset": 60,
+    "itemGap": 28,
+    "rowGap": 42,
+    "noteMaxChars": 104
+  },
+  "title": "Technology stack",
+  "groups": [],
+  "iconStyle": "original"
+}

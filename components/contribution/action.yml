@@ -1,0 +1,18 @@
+name: README contribution
+description: Generate contribution SVGs and initialize missing minimal data configs
+inputs:
+  demo:
+    description: Render packaged example data offline using normal asset filenames
+    required: false
+    default: 'false'
+  theme:
+    description: Built-in theme name; monochrome when omitted
+    required: false
+    default: monochrome
+  username:
+    description: GitHub username to fetch; defaults to the component config
+    required: false
+    default: ''
+runs:
+  using: node24
+  main: generate.mjs

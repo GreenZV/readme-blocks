@@ -1,0 +1,22 @@
+{
+  "output": "assets/banner.svg",
+  "prompt": ">",
+  "layout": {
+    "width": 1200,
+    "height": 280,
+    "fontSize": 76,
+    "advance": 46,
+    "baseline": 168,
+    "cursorY": 177,
+    "cursorHeight": 5.5
+  },
+  "animation": {
+    "initialDelayMs": 500,
+    "characterMs": 130,
+    "holdAfterTypingMs": 550,
+    "blinkMs": 450,
+    "blinkCount": 3,
+    "resetMs": 300
+  },
+  "text": ""
+}

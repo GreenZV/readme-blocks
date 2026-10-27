@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="46" viewBox="0 0 158 46" role="img" aria-labelledby="title">
+<rect width="100%" height="100%" fill="#0d1117"/>
+<title id="title">Email</title>
+<style>
+  .border { fill: none; stroke: #d4d4d4; }
+  .logo { fill: #a16207; }
+  .label { fill: #171717; font: 13px Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+  @media all {
+    .border { stroke: #404040; } .logo { fill: #fbbf24; } .label { fill: #d4d4d4; }
+  }
+</style>
+<rect x=".5" y=".5" width="157" height="45" rx="8" class="border"/>
+
+<text x="59.5" y="27.16" class="label">Email</text>
+</svg>

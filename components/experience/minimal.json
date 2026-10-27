@@ -1,0 +1,15 @@
+{
+  "groups": [
+    {
+      "label": "PYTHON",
+      "items": [
+        {
+          "label": "Python"
+        }
+      ],
+      "notes": [
+        "Web development and data processing"
+      ]
+    }
+  ]
+}

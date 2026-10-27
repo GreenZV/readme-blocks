@@ -1,0 +1,46 @@
+{
+  "light": {
+    "bannerPrompt": "#6d28d9",
+    "bannerText": "#6d28d9",
+    "bannerCursor": "#6d28d9",
+    "title": "#6d28d9",
+    "body": "#171717",
+    "muted": "#626262",
+    "logo": "#6d28d9",
+    "border": "#d4d4d4",
+    "stat": "#6d28d9",
+    "activity": [
+      "#d4d4d4",
+      "#8b5cf6",
+      "#7c3aed",
+      "#6d28d9",
+      "#5b21b6"
+    ],
+    "todayBackground": "#ede9fe",
+    "todayText": "#5b21b6",
+    "success": "#6d28d9",
+    "pending": "#6d28d9"
+  },
+  "dark": {
+    "bannerPrompt": "#a78bfa",
+    "bannerText": "#a78bfa",
+    "bannerCursor": "#a78bfa",
+    "title": "#a78bfa",
+    "body": "#d4d4d4",
+    "muted": "#a3a3a3",
+    "logo": "#a78bfa",
+    "border": "#404040",
+    "stat": "#a78bfa",
+    "activity": [
+      "#404040",
+      "#6d28d9",
+      "#8b5cf6",
+      "#a78bfa",
+      "#c4b5fd"
+    ],
+    "todayBackground": "#4c1d95",
+    "todayText": "#c4b5fd",
+    "success": "#a78bfa",
+    "pending": "#a78bfa"
+  }
+}

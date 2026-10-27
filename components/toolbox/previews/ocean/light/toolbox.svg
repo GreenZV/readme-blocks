@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="278" viewBox="0 0 900 278" role="img" aria-labelledby="title desc">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<title id="title">Toolbox — development tools and environments</title>
+<desc id="desc">DEVELOPMENT: VS Code / IntelliJ IDEA; Editors / IDEs. API &amp; DEBUGGING: Postman / curl / GDB; Requests / debugging. ENVIRONMENTS: Linux / Docker / Git; Shell / containers / version control.</desc><style>
+  text { font-family: Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+
+  .title { fill: #0369a1; font-size: 14px; }
+  .body { fill: #171717; font-size: 13px; }
+  .muted { fill: #626262; font-size: 11px; }
+  .tool { fill: #0369a1; font-size: 12px; }
+  .category { fill: #626262; font-size: 11px; }
+  .label { fill: #171717; font-size: 14px; }
+  .notes { fill: #626262; font-size: 12px; }
+  .logo { fill: #0369a1; }
+  .border, .divider { stroke: #d4d4d4; }
+  @media not all {
+  .title { fill: #38bdf8; }
+  .body { fill: #d4d4d4; }
+  .muted { fill: #a3a3a3; }
+  .tool { fill: #38bdf8; }
+  .category { fill: #a3a3a3; }
+  .label { fill: #d4d4d4; }
+  .notes { fill: #a3a3a3; }
+  .logo { fill: #38bdf8; }
+  .border, .divider { stroke: #404040; }
+  }
+</style>
+<rect x=".5" y=".5" width="899" height="277" rx="8" fill="none" class="border"/>
+<text x="22" y="31" class="title">$ toolbox --skills --software</text>
+<text x="878" y="31" text-anchor="end" class="muted">WORKING TOOLS</text>
+<path d="M22 46H878" class="divider"/><text x="22" y="78" class="title">01 / DEVELOPMENT</text>
+<text x="22" y="100" class="muted">Build and maintain applications.</text>
+<text x="480" y="78" class="tool">VS Code / IntelliJ IDEA</text>
+<text x="480" y="100" class="muted">Editors / IDEs</text><path d="M22 121H878" class="divider" opacity=".5"/><text x="22" y="150" class="title">02 / API &amp; DEBUGGING</text>
+<text x="22" y="172" class="muted">Explore and test integrations.</text>
+<text x="480" y="150" class="tool">Postman / curl / GDB</text>
+<text x="480" y="172" class="muted">Requests / debugging</text><path d="M22 193H878" class="divider" opacity=".5"/><text x="22" y="222" class="title">03 / ENVIRONMENTS</text>
+<text x="22" y="244" class="muted">Reproducible development workflows.</text>
+<text x="480" y="222" class="tool">Linux / Docker / Git</text>
+<text x="480" y="244" class="muted">Shell / containers / version control</text></svg>

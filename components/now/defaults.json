@@ -1,0 +1,9 @@
+{
+  "output": "assets/now.svg",
+  "height": 166,
+  "command": "$ now --focus",
+  "eyebrow": "CURRENT DIRECTION",
+  "focus": "",
+  "direction": "",
+  "steps": []
+}

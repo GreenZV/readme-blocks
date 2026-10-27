@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "slug": "my-project",
+      "title": "My project",
+      "description": "What the project does.",
+      "stack": [
+        "Java",
+        "Spring Boot"
+      ],
+      "status": "in-development"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "output": "assets/additional-experience.svg",
+  "layout": {
+    "columns": 2,
+    "gap": 16,
+    "textPadding": 20
+  },
+  "title": "Additional technologies",
+  "groups": []
+}

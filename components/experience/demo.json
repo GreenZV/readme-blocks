@@ -1,0 +1,63 @@
+{
+  "title": "Example development experience",
+  "groups": [
+    {
+      "label": "PYTHON",
+      "items": [
+        {
+          "label": "Python",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/python/python-plain.svg"
+        },
+        {
+          "label": "FastAPI",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/fastapi.svg"
+        },
+        {
+          "label": "Django",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/django.svg"
+        },
+        {
+          "label": "PyTorch",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/pytorch.svg"
+        },
+        {
+          "label": "TensorFlow",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/tensorflow.svg"
+        }
+      ],
+      "notes": [
+        "Web development / data processing",
+        "NumPy / pandas / pytest"
+      ]
+    },
+    {
+      "label": "C++",
+      "items": [
+        {
+          "label": "C++",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/cplusplus/cplusplus-plain.svg"
+        },
+        {
+          "label": "Qt",
+          "icon": "https://raw.githubusercontent.com/devicons/devicon/6a37858047b0e8d9c9c0e68f4a071fc410652e89/icons/qt/qt-original.svg"
+        },
+        {
+          "label": "Boost",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/boost.svg"
+        },
+        {
+          "label": "CMake",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/cmake.svg"
+        },
+        {
+          "label": "OpenGL",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/opengl.svg"
+        }
+      ],
+      "notes": [
+        "Qt / Boost / CMake / GoogleTest"
+      ]
+    }
+  ],
+  "iconStyle": "monochrome"
+}

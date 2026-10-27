@@ -1,0 +1,40 @@
+{
+  "outputDirectory": "assets/projects",
+  "layout": {
+    "cardWidth": 430,
+    "cardHeight": 210,
+    "descriptionChars": 48,
+    "titleChars": 43
+  },
+  "statuses": {
+    "planned": {
+      "label": "Planned",
+      "tone": "muted"
+    },
+    "in-development": {
+      "label": "In development",
+      "tone": "title"
+    },
+    "completed": {
+      "label": "Completed",
+      "tone": "success"
+    },
+    "maintained": {
+      "label": "Maintained",
+      "tone": "success"
+    },
+    "on-hold": {
+      "label": "On hold",
+      "tone": "pending"
+    },
+    "experimental": {
+      "label": "Experimental",
+      "tone": "pending"
+    },
+    "archived": {
+      "label": "Archived",
+      "tone": "muted"
+    }
+  },
+  "items": []
+}

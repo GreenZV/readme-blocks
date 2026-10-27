@@ -1,0 +1,11 @@
+{
+  "output": "assets/toolbox.svg",
+  "title": "Toolbox — development tools and environments",
+  "command": "$ toolbox --skills --software",
+  "eyebrow": "WORKING TOOLS",
+  "layout": {
+    "rowHeight": 72,
+    "toolsX": 480
+  },
+  "rows": []
+}

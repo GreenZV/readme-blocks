@@ -1,0 +1,22 @@
+{
+  "rows": [
+    [
+      "DEVELOPMENT",
+      "Build and maintain applications.",
+      "VS Code / IntelliJ IDEA",
+      "Editors / IDEs"
+    ],
+    [
+      "API & DEBUGGING",
+      "Explore and test integrations.",
+      "Postman / curl / GDB",
+      "Requests / debugging"
+    ],
+    [
+      "ENVIRONMENTS",
+      "Reproducible development workflows.",
+      "Linux / Docker / Git",
+      "Shell / containers / version control"
+    ]
+  ]
+}

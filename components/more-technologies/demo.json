@@ -1,0 +1,48 @@
+{
+  "title": "Other tools and technologies — examples",
+  "groups": [
+    {
+      "label": "OTHER LANGUAGES",
+      "items": [
+        "C",
+        "C#",
+        "Bash",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "label": "WEB & PLATFORMS",
+      "items": [
+        "HTML",
+        "CSS",
+        "Node.js"
+      ]
+    },
+    {
+      "label": "DATA & INTERFACES",
+      "items": [
+        "MongoDB",
+        "MySQL",
+        "SQLite",
+        "SQL",
+        "REST",
+        "OpenAPI",
+        "Swagger",
+        "WebSocket",
+        "gRPC"
+      ]
+    },
+    {
+      "label": "SYSTEMS & NETWORKING",
+      "items": [
+        "Docker Compose",
+        "nginx",
+        "SSH",
+        "systemd",
+        "Nmap",
+        "Wireshark"
+      ]
+    }
+  ]
+}

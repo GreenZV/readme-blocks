@@ -1,0 +1,28 @@
+{
+  "symbols": ".:+*#",
+  "weekdayLabels": [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+  ],
+  "animation": {
+    "durationSeconds": 2.4,
+    "delaySeconds": 0.15
+  },
+  "outputs": [
+    {
+      "path": "assets/contributions.svg",
+      "statsStyle": "compact"
+    }
+  ],
+  "fetch": {
+    "userAgent": "github-profile-calendar",
+    "timeoutSeconds": 45
+  },
+  "demoSeed": 42,
+  "username": ""
+}

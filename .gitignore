@@ -1,0 +1,4 @@
+.DS_Store
+
+# Workstation-only tooling, previews, checks, dependencies and notes
+/local/

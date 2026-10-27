@@ -1,0 +1,333 @@
+# readme-blocks
+
+Independent SVG components and GitHub Actions for profile READMEs. Add only the
+components you need. Each Action runs its own generator with Node.js 24; the
+workflow needs no package installation, build step, or external rendering service.
+Your README stays a hand-edited Markdown file. Actions generate images and
+initialize missing component configs.
+
+[See the complete demo](examples/demo/README.md) · [Browse components and theme galleries](#components) · [Configure your data](#configure-your-data) · [Choose colors and themes](#themes-and-shared-settings)
+
+## Getting started
+
+### 1. Add a workflow and run it once
+
+Create `.github/workflows/readme.yml` in your profile repository. This complete
+example runs the banner Action on every branch push or manual run. The final step commits
+both newly created minimal configs and generated SVGs:
+
+```yaml
+name: Update README assets
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-assets-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Render banner
+        uses: GreenZV/readme-blocks/components/banner@main
+
+      # Add other component Actions here, before saving the generated assets.
+
+      - name: Save generated assets
+        run: |
+          for directory in .github/readme/components assets; do
+            if [ -d "$directory" ]; then
+              git add --all -- "$directory"
+            fi
+          done
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update README assets"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+```
+
+On the first run in a repository without configs, the Action creates
+`.github/readme/components/banner.json` from its packaged `minimal.json` and
+skips banner rendering successfully. The final step commits that template even
+when no `assets/` directory exists yet. You do not create the JSON file yourself.
+
+The examples use `@main`. To use more components, add their Action steps before
+`Save generated assets`; each creates only its own missing config.
+There are no changed-file checks or path filters. The final diff check only avoids
+an empty commit. The write-back step requires repository write permission and
+branch rules that allow its commit. See [write-back and failed runs](docs/actions.md#write-back-and-failed-runs)
+for setup limitations and troubleshooting.
+
+### 2. Fill the generated config
+
+Edit the new `.github/readme/components/banner.json` in your repository:
+
+```json
+{
+  "text": "your-name"
+}
+```
+
+Replace `your-name` with your own text. Push the change; the next workflow run
+reads this existing config and creates `assets/banner.svg`. Existing config files
+are never overwritten, including when the Action version changes.
+
+### 3. Add the image to README
+
+Put this in your profile's `README.md`:
+
+```markdown
+![Terminal banner](assets/banner.svg)
+```
+
+Edit section headings, image order, text and links directly in README. Actions
+generate images and missing config templates, and never rewrite README itself.
+
+### Try the complete demo
+
+The [demonstration README](examples/demo/README.md) shows all nine components.
+Start from the [complete demo workflow](examples/demo/workflow.yml) and keep the
+component steps you want. With `demo: 'true'`, each Action immediately renders
+packaged sample SVGs and also creates its minimal config if missing. The workflow
+commits both. Fill those generated configs and remove `demo` to switch to your data.
+
+Each component page below also shows all available themes in light and dark appearances.
+
+## Components
+
+Use each component's page for its Action step, required content, optional settings,
+README image example and theme gallery.
+
+| Component and documentation | What it displays | Default output |
+| --- | --- | --- |
+| [banner](components/banner/README.md) | Animated terminal heading | `assets/banner.svg` |
+| [now](components/now/README.md) | Current focus and development stages | `assets/now.svg` |
+| [contribution](components/contribution/README.md) | Live GitHub activity as an ASCII calendar | `assets/contributions.svg` |
+| [projects](components/projects/README.md) | Separate project cards with lifecycle statuses | `assets/projects/<slug>.svg` |
+| [stack](components/stack/README.md) | Main technology stack with logos | `assets/stack.svg` |
+| [experience](components/experience/README.md) | Additional stacks, libraries and notes | `assets/experience.svg` |
+| [toolbox](components/toolbox/README.md) | Tools, development environments and platforms | `assets/toolbox.svg` |
+| [more-technologies](components/more-technologies/README.md) | Text cards grouping other technologies and software | `assets/additional-experience.svg` |
+| [contact](components/contact/README.md) | Separate contact badges | `assets/contacts/<slug>.svg` |
+
+## Configure your data
+
+### Automatically created component files
+
+Every component Action checks `.github/readme/components/<component>.json`.
+If it is absent, the Action creates it from the packaged `minimal.json` example.
+Only content fields are copied; sizes, animation and output settings remain built-in.
+The file is created exclusively, so existing files are never replaced.
+
+In normal mode, the run that creates a config skips rendering that component.
+Other configured components still run. Fill the generated template before the
+next run: only the initialization run is skipped. Later runs use whatever values
+are in the file, including unedited examples. In demo mode, the Action creates the same template and renders demo SVGs
+immediately, while ignoring any existing component data. Invalid existing configs
+fail normal builds instead of being replaced or silently converted to demo data.
+
+The final workflow step must commit `.github/readme/components/` as well as
+`assets/`, as shown above. Actions create files in the checked-out workspace; the
+shared commit step saves them back to the repository in one commit.
+
+After running banner and contribution Actions, the repository can contain:
+
+```text
+README.md
+.github/
+  workflows/
+    readme.yml
+  readme/
+    components/
+      banner.json              # created by the banner Action; fill in your text
+      contribution.json        # created by contribution; fill in your username
+    theme.json                 # optional global overrides
+    themes/
+      banner.json              # optional overrides for this component
+assets/                        # generated after configs are filled
+```
+
+A generated contribution config needs only your GitHub username:
+
+```json
+{
+  "username": "your-github-username"
+}
+```
+
+No config is created for a component you do not run. The linked `minimal.json`
+examples on component pages show the exact templates the Actions create. You can
+still prepare a config manually before the first run if you prefer.
+
+### Use your data instead of the demo
+
+If you started with demo steps, fill their generated configs and remove
+`demo: 'true'`. With no other inputs, remove the whole `with` block:
+
+```yaml
+- name: Render banner
+  uses: GreenZV/readme-blocks/components/banner@main
+
+- name: Render contribution
+  uses: GreenZV/readme-blocks/components/contribution@main
+```
+
+Place these steps before `Save generated assets`. Each Action discovers its own
+fixed config path; do not pass a `config` or theme-file path in the workflow.
+
+Once contribution has a config, normal builds fetch current public activity from
+GitHub every time. No saved calendar JSON is needed or created. Request or parsing
+failures fail the build and preserve the previous SVG. To refresh activity between
+pushes, you can add a `schedule` trigger; it runs all component steps unless you
+define a separate workflow for contribution.
+
+### Override rendering settings only when needed
+
+Content is sufficient. Output paths, dimensions, spacing, animation and project
+status definitions already have defaults. Edit the existing generated config and
+add only the settings you want to change:
+
+```json
+{
+  "text": "your-name",
+  "animation": {
+    "characterMs": 80
+  }
+}
+```
+
+Objects merge recursively with `defaults.json`; arrays replace the entire list.
+Normal mode uses defaults plus your config. Demo mode uses defaults plus packaged
+`demo.json` and ignores your component data file. Theme overrides apply in both modes.
+
+Each component page documents its fields and links to its complete `defaults.json`.
+See [configuration details](docs/configuration.md) for field formats, local SVG
+paths, HTTPS icon URLs and optional overrides. Projects and contacts can use `{}`
+to render no items; other components require their main content fields.
+
+## Themes and shared settings
+
+The default built-in theme is always **monochrome** when the Action's `theme`
+input is omitted. Every theme includes light and dark colors. Production SVGs
+have transparent backgrounds and switch appearance automatically.
+
+<!-- readme-blocks:themes:start -->
+
+| Theme | Light accent | Dark accent | Banner preview |
+| --- | --- | --- | --- |
+| [monochrome](themes/monochrome.json) | `#262626` | `#e5e5e5` | [Preview](components/banner/README.md#monochrome) |
+| [amber](themes/amber.json) | `#a16207` | `#fbbf24` | [Preview](components/banner/README.md#amber) |
+| [crimson](themes/crimson.json) | `#b91c1c` | `#f87171` | [Preview](components/banner/README.md#crimson) |
+| [emerald](themes/emerald.json) | `#047857` | `#34d399` | [Preview](components/banner/README.md#emerald) |
+| [ocean](themes/ocean.json) | `#0369a1` | `#38bdf8` | [Preview](components/banner/README.md#ocean) |
+| [violet](themes/violet.json) | `#6d28d9` | `#a78bfa` | [Preview](components/banner/README.md#violet) |
+
+<!-- readme-blocks:themes:end -->
+
+Choose a built-in theme for a component in its workflow step:
+
+```yaml
+- uses: GreenZV/readme-blocks/components/banner@main
+  with:
+    theme: ocean
+```
+
+For the same built-in theme across multiple components, use the same `theme`
+input in their steps. You can also declare a workflow environment variable and
+reference it as `theme: ${{ env.README_THEME }}` in each step.
+
+For your own palette, create `.github/readme/theme.json`. This optional file
+applies global overrides to every component, without any extra workflow input:
+
+```json
+{
+  "themes": {
+    "light": { "title": "#0369a1", "logo": "#0369a1" },
+    "dark": { "title": "#38bdf8", "logo": "#38bdf8" }
+  }
+}
+```
+
+To customize only one component, create
+`.github/readme/themes/<component>.json`. For example,
+`.github/readme/themes/banner.json` can override the banner text color:
+
+```json
+{
+  "themes": {
+    "light": { "bannerText": "#6d28d9" },
+    "dark": { "bannerText": "#a78bfa" }
+  }
+}
+```
+
+Settings resolve in this order: rendering defaults → selected built-in theme
+(or monochrome) → global overrides → component overrides. These optional files
+can also override shared typography, layout and motion. They do not select the
+built-in theme by name. No other theme paths are checked.
+
+The available palette roles are listed in [monochrome.json](themes/monochrome.json);
+shared typography, layout and motion defaults are in [config/shared.json](config/shared.json).
+Override only the keys you need. See [theme configuration](themes/README.md) for details. The component pages show
+all available themes, with explicit light and dark gallery backgrounds.
+
+## Link cards and badges
+
+Projects and contacts generate one SVG per configured slug. Make each image
+clickable by wrapping it in a link in your README:
+
+```html
+<a href="https://github.com/OWNER/REPOSITORY">
+  <img src="assets/projects/my-project.svg" width="430" alt="My project">
+</a>
+
+<a href="https://github.com/YOUR_USERNAME">
+  <img src="assets/contacts/github.svg" height="46" alt="GitHub">
+</a>
+```
+
+Adding an item creates its image; it does not add the image or link to README.
+When removing an item, remove its README entry and obsolete SVG as well. Project
+statuses describe their lifecycle and are set in the config, independently of CI/CD.
+
+## Adding a built-in theme
+
+Create `themes/<name>.json` by copying an existing palette and changing its colors,
+then push it. The [documentation workflow](.github/workflows/documentation.yml)
+automatically regenerates every component gallery, theme catalogs and the complete
+demo. No theme list or Markdown page needs a manual update. See the
+[theme authoring instructions](themes/README.md#add-a-built-in-theme) for details.
+
+## More documentation
+
+- [All components in a complete demonstration README](examples/demo/README.md).
+- [Complete demo workflow](examples/demo/workflow.yml).
+- [Action inputs and workflow behavior](docs/actions.md).
+- [Minimal configs and optional rendering settings](docs/configuration.md).
+- [Built-in themes and fixed override paths](themes/README.md).
+- [Component architecture](docs/components.md).
+- [Add a new component](docs/adding-components.md).
+
+## License
+
+The library code and original documentation are licensed under [MIT](LICENSE).
+User-supplied data and icons retain their own rights and licensing conditions.
+The library contains no bundled third-party logo files. Demo configs reference
+version-pinned external SVG URLs; rendering downloads and embeds those logos in
+the generated demo and gallery images. Their inclusion does not imply ownership
+or endorsement, and the code license does not replace the brands' terms.
+See [icons](docs/configuration.md#icons) for source behavior and usage conditions.

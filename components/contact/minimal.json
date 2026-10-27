@@ -1,0 +1,13 @@
+{
+  "groups": [
+    {
+      "label": "CODE & COMMUNITY",
+      "items": [
+        {
+          "slug": "github",
+          "label": "GitHub"
+        }
+      ]
+    }
+  ]
+}

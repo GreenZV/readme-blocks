@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="46" viewBox="0 0 158 46" role="img" aria-labelledby="title">
+<title id="title">GitLab</title>
+<style>
+  .border { fill: none; stroke: #d4d4d4; }
+  .logo { fill: #404040; }
+  .label { fill: #171717; font: 13px Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+  @media (prefers-color-scheme: dark) {
+    .border { stroke: #404040; } .logo { fill: #d4d4d4; } .label { fill: #d4d4d4; }
+  }
+</style>
+<rect x=".5" y=".5" width="157" height="45" rx="8" class="border"/>
+<svg x="38.6" y="12" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><mask id="contact-icon" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22" style="mask-type:alpha"><image width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0TGFiPC90aXRsZT48cGF0aCBkPSJtMjMuNjAwNCA5LjU5MjctLjAzMzctLjA4NjJMMjAuMy45ODE0YS44NTEuODUxIDAgMCAwLS4zMzYyLS40MDUuODc0OC44NzQ4IDAgMCAwLS45OTk3LjA1MzkuODc0OC44NzQ4IDAgMCAwLS4yOS40Mzk5bC0yLjIwNTUgNi43NDhINy41Mzc1bC0yLjIwNTctNi43NDhhLjg1NzMuODU3MyAwIDAgMC0uMjktLjQ0MTIuODc0OC44NzQ4IDAgMCAwLS45OTk3LS4wNTM3Ljg1ODUuODU4NSAwIDAgMC0uMzM2Mi40MDQ5TC40MzMyIDkuNTAxNWwtLjAzMjUuMDg2MmE2LjA2NTcgNi4wNjU3IDAgMCAwIDIuMDExOSA3LjAxMDVsLjAxMTMuMDA4Ny4wMy4wMjEzIDQuOTc2IDMuNzI2NCAyLjQ2MiAxLjg2MzMgMS40OTk1IDEuMTMyMWExLjAwODUgMS4wMDg1IDAgMCAwIDEuMjE5NyAwbDEuNDk5NS0xLjEzMjEgMi40NjE5LTEuODYzMyA1LjAwNi0zLjc0ODkuMDEyNS0uMDFhNi4wNjgyIDYuMDY4MiAwIDAgMCAyLjAwOTQtNy4wMDN6Ii8+PC9zdmc+" preserveAspectRatio="xMidYMid meet"/></mask></defs><rect width="22" height="22" class="logo" mask="url(#contact-icon)"/></svg>
+<text x="72.6" y="27.16" class="label">GitLab</text>
+</svg>

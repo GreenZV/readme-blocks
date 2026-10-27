@@ -1,0 +1,15 @@
+{
+  "groups": [
+    {
+      "label": "BACKEND",
+      "items": [
+        {
+          "label": "Java"
+        },
+        {
+          "label": "Git"
+        }
+      ]
+    }
+  ]
+}

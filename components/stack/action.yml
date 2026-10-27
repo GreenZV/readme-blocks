@@ -1,0 +1,14 @@
+name: README stack
+description: Generate stack SVGs and initialize missing minimal data configs
+inputs:
+  demo:
+    description: Render example data, downloading its SVG icon URLs at build time
+    required: false
+    default: 'false'
+  theme:
+    description: Built-in theme name; monochrome when omitted
+    required: false
+    default: monochrome
+runs:
+  using: node24
+  main: generate.mjs

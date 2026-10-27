@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "typography": {
+    "fontFamily": "Menlo, Consolas, \"Liberation Mono\", monospace",
+    "calendarFontFamily": "Menlo, Consolas, \"Liberation Mono\", monospace",
+    "sizes": {
+      "title": 14,
+      "body": 13,
+      "muted": 11,
+      "tool": 12,
+      "category": 11,
+      "label": 14,
+      "notes": 12,
+      "cell": 13
+    }
+  },
+  "layout": {
+    "width": 900,
+    "padding": 22,
+    "radius": 8,
+    "iconSize": 24
+  },
+  "motion": {
+    "enabled": true,
+    "respectReducedMotion": true
+  }
+}

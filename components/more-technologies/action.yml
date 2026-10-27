@@ -1,0 +1,14 @@
+name: README more-technologies
+description: Generate more-technologies SVGs and initialize missing minimal data configs
+inputs:
+  demo:
+    description: Render packaged example data offline using normal asset filenames
+    required: false
+    default: 'false'
+  theme:
+    description: Built-in theme name; monochrome when omitted
+    required: false
+    default: monochrome
+runs:
+  using: node24
+  main: generate.mjs

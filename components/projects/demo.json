@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "slug": "demo-java-service",
+      "title": "Java Service",
+      "description": "A sample backend API with persistence and a containerized deployment.",
+      "stack": [
+        "Java",
+        "Spring",
+        "PostgreSQL"
+      ],
+      "demo": true,
+      "status": "in-development",
+      "showLinkHint": true
+    },
+    {
+      "slug": "demo-event-worker",
+      "title": "Event Worker",
+      "description": "A sample worker that processes events and caches recent results.",
+      "stack": [
+        "Java",
+        "Kafka",
+        "Redis"
+      ],
+      "demo": true,
+      "status": "completed",
+      "showLinkHint": true
+    },
+    {
+      "slug": "demo-deployment-kit",
+      "title": "Deployment Kit",
+      "description": "A sample environment for packaging and deploying backend services.",
+      "stack": [
+        "Docker",
+        "Terraform",
+        "Kubernetes"
+      ],
+      "demo": true,
+      "status": "on-hold",
+      "showLinkHint": true
+    },
+    {
+      "slug": "demo-observability-lab",
+      "title": "Observability Lab",
+      "description": "Sample dashboards and metrics for understanding service behavior.",
+      "stack": [
+        "Grafana",
+        "Prometheus",
+        "Docker"
+      ],
+      "demo": true,
+      "status": "experimental",
+      "showLinkHint": true
+    },
+    {
+      "slug": "demo-api-contracts",
+      "title": "API Contracts",
+      "description": "A sample workspace for defining and checking service interfaces.",
+      "stack": [
+        "Java",
+        "OpenAPI",
+        "gRPC"
+      ],
+      "demo": true,
+      "status": "maintained",
+      "showLinkHint": true
+    },
+    {
+      "slug": "demo-backend-utilities",
+      "title": "Backend Utilities",
+      "description": "Sample command-line helpers for everyday backend development tasks.",
+      "stack": [
+        "Java",
+        "Maven",
+        "Bash"
+      ],
+      "demo": true,
+      "status": "archived",
+      "showLinkHint": true
+    }
+  ]
+}

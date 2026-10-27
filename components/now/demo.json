@@ -1,0 +1,10 @@
+{
+  "focus": "Building useful software",
+  "direction": "From an idea to a tested, deployed and observable service.",
+  "steps": [
+    "build",
+    "test",
+    "deploy",
+    "observe"
+  ]
+}

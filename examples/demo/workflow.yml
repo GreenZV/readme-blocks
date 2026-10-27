@@ -1,0 +1,71 @@
+name: Render README demo
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['**']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-assets-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Render banner
+        uses: GreenZV/readme-blocks/components/banner@main
+        with:
+          demo: 'true'
+      - name: Render now
+        uses: GreenZV/readme-blocks/components/now@main
+        with:
+          demo: 'true'
+      - name: Render contribution
+        uses: GreenZV/readme-blocks/components/contribution@main
+        with:
+          demo: 'true'
+      - name: Render projects
+        uses: GreenZV/readme-blocks/components/projects@main
+        with:
+          demo: 'true'
+      - name: Render stack
+        uses: GreenZV/readme-blocks/components/stack@main
+        with:
+          demo: 'true'
+      - name: Render experience
+        uses: GreenZV/readme-blocks/components/experience@main
+        with:
+          demo: 'true'
+      - name: Render toolbox
+        uses: GreenZV/readme-blocks/components/toolbox@main
+        with:
+          demo: 'true'
+      - name: Render more-technologies
+        uses: GreenZV/readme-blocks/components/more-technologies@main
+        with:
+          demo: 'true'
+      - name: Render contact
+        uses: GreenZV/readme-blocks/components/contact@main
+        with:
+          demo: 'true'
+      - name: Save generated assets
+        run: |
+          for directory in .github/readme/components assets; do
+            if [ -d "$directory" ]; then
+              git add --all -- "$directory"
+            fi
+          done
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Render README demo assets"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

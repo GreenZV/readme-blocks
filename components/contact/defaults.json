@@ -1,0 +1,10 @@
+{
+  "outputDirectory": "assets/contacts",
+  "layout": {
+    "minWidth": 158,
+    "height": 46,
+    "iconSize": 22
+  },
+  "groups": [],
+  "iconStyle": "original"
+}

@@ -1,0 +1,103 @@
+{
+  "groups": [
+    {
+      "label": "GET IN TOUCH",
+      "items": [
+        {
+          "slug": "email",
+          "label": "Email"
+        },
+        {
+          "slug": "telegram",
+          "label": "Telegram",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/telegram.svg"
+        },
+        {
+          "slug": "discord",
+          "label": "Discord",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/discord.svg"
+        },
+        {
+          "slug": "linkedin",
+          "label": "LinkedIn",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/linkedin.svg"
+        }
+      ]
+    },
+    {
+      "label": "CODE & COMMUNITY",
+      "items": [
+        {
+          "slug": "github",
+          "label": "GitHub",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/github.svg"
+        },
+        {
+          "slug": "gitlab",
+          "label": "GitLab",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/gitlab.svg"
+        },
+        {
+          "slug": "leetcode",
+          "label": "LeetCode",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/leetcode.svg"
+        },
+        {
+          "slug": "codeforces",
+          "label": "Codeforces",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/codeforces.svg"
+        },
+        {
+          "slug": "stackoverflow",
+          "label": "Stack Overflow",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/stackoverflow.svg"
+        }
+      ]
+    },
+    {
+      "label": "SOCIAL & WRITING",
+      "items": [
+        {
+          "slug": "x",
+          "label": "X (Twitter)",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/x.svg"
+        },
+        {
+          "slug": "facebook",
+          "label": "Facebook",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/facebook.svg"
+        },
+        {
+          "slug": "mastodon",
+          "label": "Mastodon",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/mastodon.svg"
+        },
+        {
+          "slug": "devdotto",
+          "label": "DEV Community",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/devdotto.svg"
+        },
+        {
+          "slug": "medium",
+          "label": "Medium",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/medium.svg"
+        }
+      ]
+    },
+    {
+      "label": "MORE TO EXPLORE",
+      "items": [
+        {
+          "slug": "website",
+          "label": "Website"
+        },
+        {
+          "slug": "codewars",
+          "label": "Codewars",
+          "icon": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/codewars.svg"
+        }
+      ]
+    }
+  ],
+  "iconStyle": "monochrome"
+}

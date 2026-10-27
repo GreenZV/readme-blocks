@@ -1,0 +1,179 @@
+# banner
+
+An animated terminal heading with a static reduced-motion fallback.
+
+[Getting started](../../README.md#getting-started) · [All components](../../README.md#components) · [Complete demo](../../examples/demo/README.md) · [Theme settings](../../themes/README.md) · [Minimal config](minimal.json) · [All defaults](defaults.json) · [Action inputs](action.yml)
+
+## Use your own data
+
+1. Add this component Action before the workflow commit step and run it once.
+2. The Action creates `.github/readme/components/banner.json` automatically if missing; normal mode skips rendering on that run. The commit step saves the template.
+3. Fill the generated config, add the image to README, and push to render your data.
+
+### Minimal data config
+
+The Action creates this template at `.github/readme/components/banner.json`; edit its sample values rather than creating the file yourself. Existing files are never overwritten.
+
+```json
+{
+  "text": "your-name"
+}
+```
+
+### Action step
+
+```yaml
+- uses: GreenZV/readme-blocks/components/banner@main
+```
+
+No config path input is needed. The Action finds `.github/readme/components/banner.json` automatically. See the [main guide](../../README.md#getting-started) for the complete workflow, permissions and the commit step that saves both configs and assets.
+
+### Add it to README
+
+```markdown
+![banner](assets/banner.svg)
+```
+
+Default output: `assets/banner.svg`. Text, image order, links and expandable sections remain hand-edited in README.
+
+## Configuration
+
+Supply your content first. Other settings are optional and inherit [defaults.json](defaults.json). Objects merge recursively; arrays replace the whole list.
+
+| Field | Meaning |
+| --- | --- |
+| `text` | Required terminal text. |
+| `prompt` | Optional prefix; defaults to `>`. |
+| `animation` | Typing delays, character speed, cursor blinking and reset timing, in milliseconds. |
+| `layout` | Canvas size, font size, character advance and cursor positioning. |
+| `output` | SVG output path; defaults to `assets/banner.svg`. |
+
+Use the global motion settings to disable animation or respect reduced-motion preferences. The SVG uses the shared monospace font chain; no font installation is required on the runner.
+
+### Customization example
+
+Save this in the same `.github/readme/components/banner.json` file, replacing the example content with your own:
+
+```json
+{
+  "text": "your-name",
+  "animation": {
+    "characterMs": 80,
+    "blinkCount": 2
+  }
+}
+```
+
+## Themes
+
+The built-in theme is monochrome when omitted. Select another with the workflow `theme` input:
+
+```yaml
+- uses: GreenZV/readme-blocks/components/banner@main
+  with:
+    theme: ocean
+```
+
+Global overrides are read from `.github/readme/theme.json`. For this component only, save overrides at `.github/readme/themes/banner.json`, for example:
+
+```json
+{
+  "themes": {
+    "light": {
+      "bannerText": "#0369a1"
+    },
+    "dark": {
+      "bannerText": "#38bdf8"
+    }
+  }
+}
+```
+
+Missing theme files are optional; no theme path is passed to the workflow. Resolution is rendering defaults → selected built-in theme → global overrides → component overrides. Shared typography, layout and motion are also configurable. See [theme settings](../../themes/README.md).
+
+## Try the demo
+
+```yaml
+- uses: GreenZV/readme-blocks/components/banner@main
+  with:
+    demo: 'true'
+```
+
+Demo mode renders packaged [demo.json](demo.json) with normal output filenames and creates the minimal data config if missing. Stack, experience and contact demos download their icon URLs during the build. Existing data files stay unchanged and are ignored for demo rendering. The workflow commits templates and SVGs together. Theme selection and overrides still apply. Fill the generated config and remove `demo` to use your own data.
+
+## Theme gallery
+
+Every built-in theme appears below in light and dark mode. Gallery SVGs use explicit backgrounds and disabled animation for comparison; production SVGs remain transparent and adapt automatically.
+
+## monochrome
+
+Workflow input: `theme: monochrome`
+
+### Light
+
+![banner — monochrome, light](previews/monochrome/light/banner.svg)
+
+### Dark
+
+![banner — monochrome, dark](previews/monochrome/dark/banner.svg)
+
+## amber
+
+Workflow input: `theme: amber`
+
+### Light
+
+![banner — amber, light](previews/amber/light/banner.svg)
+
+### Dark
+
+![banner — amber, dark](previews/amber/dark/banner.svg)
+
+## crimson
+
+Workflow input: `theme: crimson`
+
+### Light
+
+![banner — crimson, light](previews/crimson/light/banner.svg)
+
+### Dark
+
+![banner — crimson, dark](previews/crimson/dark/banner.svg)
+
+## emerald
+
+Workflow input: `theme: emerald`
+
+### Light
+
+![banner — emerald, light](previews/emerald/light/banner.svg)
+
+### Dark
+
+![banner — emerald, dark](previews/emerald/dark/banner.svg)
+
+## ocean
+
+Workflow input: `theme: ocean`
+
+### Light
+
+![banner — ocean, light](previews/ocean/light/banner.svg)
+
+### Dark
+
+![banner — ocean, dark](previews/ocean/dark/banner.svg)
+
+## violet
+
+Workflow input: `theme: violet`
+
+### Light
+
+![banner — violet, light](previews/violet/light/banner.svg)
+
+### Dark
+
+![banner — violet, dark](previews/violet/dark/banner.svg)
+

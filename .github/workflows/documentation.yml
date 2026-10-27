@@ -1,0 +1,41 @@
+name: Update documentation and theme previews
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-blocks-documentation-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Render demos, theme galleries and catalogs
+        run: node .github/scripts/build-docs.mjs
+
+      - name: Save generated documentation
+        run: |
+          git add --all -- README.md themes/README.md components examples/demo
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update documentation and theme previews"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

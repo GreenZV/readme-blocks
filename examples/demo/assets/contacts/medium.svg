@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="46" viewBox="0 0 158 46" role="img" aria-labelledby="title">
+<title id="title">Medium</title>
+<style>
+  .border { fill: none; stroke: #d4d4d4; }
+  .logo { fill: #404040; }
+  .label { fill: #171717; font: 13px Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+  @media (prefers-color-scheme: dark) {
+    .border { stroke: #404040; } .logo { fill: #d4d4d4; } .label { fill: #d4d4d4; }
+  }
+</style>
+<rect x=".5" y=".5" width="157" height="45" rx="8" class="border"/>
+<svg x="38.6" y="12" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><mask id="contact-icon" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22" style="mask-type:alpha"><image width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TWVkaXVtPC90aXRsZT48cGF0aCBkPSJNMTMuNTQgMTJhNi44IDYuOCAwIDAxLTYuNzcgNi44MkE2LjggNi44IDAgMDEwIDEyYTYuOCA2LjggMCAwMTYuNzctNi44MkE2LjggNi44IDAgMDExMy41NCAxMnpNMjAuOTYgMTJjMCAzLjU0LTEuNTEgNi40Mi0zLjM4IDYuNDItMS44NyAwLTMuMzktMi44OC0zLjM5LTYuNDJzMS41Mi02LjQyIDMuMzktNi40MiAzLjM4IDIuODggMy4zOCA2LjQyTTI0IDEyYzAgMy4xNy0uNTMgNS43NS0xLjE5IDUuNzUtLjY2IDAtMS4xOS0yLjU4LTEuMTktNS43NXMuNTMtNS43NSAxLjE5LTUuNzVDMjMuNDcgNi4yNSAyNCA4LjgzIDI0IDEyeiIvPjwvc3ZnPg==" preserveAspectRatio="xMidYMid meet"/></mask></defs><rect width="22" height="22" class="logo" mask="url(#contact-icon)"/></svg>
+<text x="72.6" y="27.16" class="label">Medium</text>
+</svg>
