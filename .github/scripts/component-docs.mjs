@@ -1,4 +1,5 @@
 // Repository documentation source. Consumer component Actions never import this module.
+import { appearancePath } from '../../scripts/lib/appearance.mjs';
 import { mergeSettings } from '../../scripts/lib/config.mjs';
 
 const guides = {
@@ -144,6 +145,11 @@ const guides = {
   },
 };
 
+function picture(image) {
+  const source = image.match(/src="([^"]+)"/)[1];
+  return `<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="${appearancePath(source, 'dark')}">\n  <source media="(prefers-color-scheme: light)" srcset="${appearancePath(source, 'light')}">\n  ${image}\n</picture>`;
+}
+
 export function componentPage(name, minimal, output, gallery) {
   const guide = guides[name];
   if (!guide) {
@@ -151,11 +157,12 @@ export function componentPage(name, minimal, output, gallery) {
   }
   const dataPath = `.github/readme/components/${name}.json`;
   const themePath = `.github/readme/themes/${name}.json`;
-  const image = name === 'projects'
+  let image = name === 'projects'
     ? '<a href="https://github.com/OWNER/REPOSITORY">\n  <img src="assets/projects/my-project.svg" width="430" alt="My project">\n</a>'
     : name === 'contact'
       ? '<a href="https://github.com/YOUR_USERNAME">\n  <img src="assets/contacts/github.svg" height="46" alt="GitHub">\n</a>'
-      : `![${name}](${output})`;
+      : `<img src="${output}" alt="${name}">`;
+  image = image.replace(/<img\b[^>]*>/g, picture);
   const theme = {
     themes: {
       light: { [guide.colorRole]: '#0369a1' },
@@ -176,8 +183,8 @@ export function componentPage(name, minimal, output, gallery) {
     '```yaml\n- uses: GreenZV/readme-blocks/components/' + name + '@main\n```',
     `No config path input is needed. The Action finds \`${dataPath}\` automatically. See the [main guide](../../README.md#getting-started) for the complete workflow, permissions and the commit step that saves both configs and assets.`,
     '### Add it to README',
-    '```' + (name === 'projects' || name === 'contact' ? 'html' : 'markdown') + '\n' + image + '\n```',
-    `Default output: \`${output}\`. Text, image order, links and expandable sections remain hand-edited in README.`,
+    '```html\n' + image + '\n```',
+    `Default output: \`${output}\`. The build also writes matching \`.light.svg\` and \`.dark.svg\` variants. The default appearance is auto; use the picture markup above to follow the selected GitHub theme. A fixed appearance configured below also works with the same markup. Text, image order, links and expandable sections remain hand-edited in README.`,
     '## Configuration',
     'Supply your content first. Other settings are optional and inherit [defaults.json](defaults.json). Objects merge recursively; arrays replace the whole list.',
     '| Field | Meaning |\n| --- | --- |\n' + guide.fields.map(([field, meaning]) => `| \`${field}\` | ${meaning} |`).join('\n'),
@@ -190,12 +197,16 @@ export function componentPage(name, minimal, output, gallery) {
     '```yaml\n- uses: GreenZV/readme-blocks/components/' + name + '@main\n  with:\n    theme: ocean\n```',
     `Global overrides are read from \`.github/readme/theme.json\`. For this component only, save overrides at \`${themePath}\`, for example:`,
     json(theme),
-    'Missing theme files are optional; no theme path is passed to the workflow. Resolution is rendering defaults → selected built-in theme → global overrides → component overrides. Shared typography, layout and motion are also configurable. See [theme settings](../../themes/README.md).',
+    'Missing theme files are optional; no theme path is passed to the workflow. Resolution is rendering defaults → selected built-in theme → global overrides → component overrides. Shared appearance, typography, layout and motion are also configurable. See [theme settings](../../themes/README.md).',
+    '### Light and dark appearance',
+    'Both appearances are enabled by default (`appearance: auto`). To pin this component to dark colors, add this optional setting to `' + themePath + '` alongside any existing overrides:',
+    json({ appearance: 'dark' }),
+    'Use `light` for light colors or `auto` for automatic switching. The same key in `.github/readme/theme.json` sets the global default. This is independent of the named color palette and is not a workflow input or a content field. In fixed modes all three SVG filenames use the chosen appearance, so the README markup above does not need to change. See [appearance settings and manual integration](../../docs/appearance.md) for single-image alternatives and direct generation.',
     '## Try the demo',
     '```yaml\n- uses: GreenZV/readme-blocks/components/' + name + '@main\n  with:\n    demo: \'true\'\n```',
     'Demo mode renders packaged [demo.json](demo.json) with normal output filenames and creates the minimal data config if missing. Stack, experience and contact demos download their icon URLs during the build. Existing data files stay unchanged and are ignored for demo rendering. The workflow commits templates and SVGs together. Theme selection and overrides still apply. Fill the generated config and remove `demo` to use your own data.',
     '## Theme gallery',
-    'Every built-in theme appears below in light and dark mode. Gallery SVGs use explicit backgrounds and disabled animation for comparison; production SVGs remain transparent and adapt automatically.' + (name === 'projects' || name === 'contact' ? ' Representative items are shown; the complete demo includes the full set.' : ''),
+    'Every built-in theme appears below in light and dark mode. Gallery SVGs use explicit backgrounds and disabled animation for comparison; production SVGs remain transparent. The original SVG uses browser color preferences; the explicit variants follow the GitHub theme through the picture markup above.' + (name === 'projects' || name === 'contact' ? ' Representative items are shown; the complete demo includes the full set.' : ''),
     gallery,
   ].join('\n\n') + '\n';
 }

@@ -1,5 +1,6 @@
 {
   "schemaVersion": 1,
+  "appearance": "auto",
   "typography": {
     "fontFamily": "Menlo, Consolas, \"Liberation Mono\", monospace",
     "calendarFontFamily": "Menlo, Consolas, \"Liberation Mono\", monospace",

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="46" viewBox="0 0 158 46" role="img" aria-labelledby="title">
+<title id="title">Codeforces</title>
+<style>
+  .border { fill: none; stroke: #d4d4d4; }
+  .logo { fill: #404040; }
+  .label { fill: #171717; font: 13px Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+  @media not all {
+    .border { stroke: #404040; } .logo { fill: #d4d4d4; } .label { fill: #d4d4d4; }
+  }
+</style>
+<rect x=".5" y=".5" width="157" height="45" rx="8" class="border"/>
+<svg x="23" y="12" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><mask id="contact-icon" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22" style="mask-type:alpha"><image width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+Q29kZWZvcmNlczwvdGl0bGU+PHBhdGggZD0iTTQuNSA3LjVDNS4zMjggNy41IDYgOC4xNzIgNiA5djEwLjVjMCAuODI4LS42NzIgMS41LTEuNSAxLjVoLTNDLjY3MyAyMSAwIDIwLjMyOCAwIDE5LjVWOWMwLS44MjguNjczLTEuNSAxLjUtMS41aDN6bTktNC41Yy44MjggMCAxLjUuNjcyIDEuNSAxLjV2MTVjMCAuODI4LS42NzIgMS41LTEuNSAxLjVoLTNjLS44MjcgMC0xLjUtLjY3Mi0xLjUtMS41di0xNWMwLS44MjguNjczLTEuNSAxLjUtMS41aDN6bTkgNy41Yy44MjggMCAxLjUuNjcyIDEuNSAxLjV2Ny41YzAgLjgyOC0uNjcyIDEuNS0xLjUgMS41aC0zYy0uODI4IDAtMS41LS42NzItMS41LTEuNVYxMmMwLS44MjguNjcyLTEuNSAxLjUtMS41aDN6Ii8+PC9zdmc+" preserveAspectRatio="xMidYMid meet"/></mask></defs><rect width="22" height="22" class="logo" mask="url(#contact-icon)"/></svg>
+<text x="57" y="27.16" class="label">Codeforces</text>
+</svg>

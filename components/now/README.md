@@ -30,11 +30,15 @@ No config path input is needed. The Action finds `.github/readme/components/now.
 
 ### Add it to README
 
-```markdown
-![now](assets/now.svg)
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/now.dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/now.light.svg">
+  <img src="assets/now.svg" alt="now">
+</picture>
 ```
 
-Default output: `assets/now.svg`. Text, image order, links and expandable sections remain hand-edited in README.
+Default output: `assets/now.svg`. The build also writes matching `.light.svg` and `.dark.svg` variants. The default appearance is auto; use the picture markup above to follow the selected GitHub theme. A fixed appearance configured below also works with the same markup. Text, image order, links and expandable sections remain hand-edited in README.
 
 ## Configuration
 
@@ -92,7 +96,19 @@ Global overrides are read from `.github/readme/theme.json`. For this component o
 }
 ```
 
-Missing theme files are optional; no theme path is passed to the workflow. Resolution is rendering defaults → selected built-in theme → global overrides → component overrides. Shared typography, layout and motion are also configurable. See [theme settings](../../themes/README.md).
+Missing theme files are optional; no theme path is passed to the workflow. Resolution is rendering defaults → selected built-in theme → global overrides → component overrides. Shared appearance, typography, layout and motion are also configurable. See [theme settings](../../themes/README.md).
+
+### Light and dark appearance
+
+Both appearances are enabled by default (`appearance: auto`). To pin this component to dark colors, add this optional setting to `.github/readme/themes/now.json` alongside any existing overrides:
+
+```json
+{
+  "appearance": "dark"
+}
+```
+
+Use `light` for light colors or `auto` for automatic switching. The same key in `.github/readme/theme.json` sets the global default. This is independent of the named color palette and is not a workflow input or a content field. In fixed modes all three SVG filenames use the chosen appearance, so the README markup above does not need to change. See [appearance settings and manual integration](../../docs/appearance.md) for single-image alternatives and direct generation.
 
 ## Try the demo
 
@@ -106,7 +122,7 @@ Demo mode renders packaged [demo.json](demo.json) with normal output filenames a
 
 ## Theme gallery
 
-Every built-in theme appears below in light and dark mode. Gallery SVGs use explicit backgrounds and disabled animation for comparison; production SVGs remain transparent and adapt automatically.
+Every built-in theme appears below in light and dark mode. Gallery SVGs use explicit backgrounds and disabled animation for comparison; production SVGs remain transparent. The original SVG uses browser color preferences; the explicit variants follow the GitHub theme through the picture markup above.
 
 ## monochrome
 

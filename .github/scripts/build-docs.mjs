@@ -4,6 +4,7 @@ import path from 'node:path';
 import os from 'node:os';
 import { pathToFileURL } from 'node:url';
 import { ROOT, cliOptions, context, isMain, loadJson, loadShared, writeAssets } from '../../scripts/lib/config.mjs';
+import { forceAppearance } from '../../scripts/lib/appearance.mjs';
 import { componentPage } from './component-docs.mjs';
 
 const CATALOG_START = '<!-- readme-blocks:themes:start -->';
@@ -40,10 +41,8 @@ function themeContext(component, theme, animated) {
 }
 
 function appearancePreview(svg, appearance) {
-  const mode = appearance === 'dark' ? 'all' : 'not all';
   const background = appearance === 'dark' ? '#0d1117' : '#ffffff';
-  return svg
-    .replace(/@media\s*\(\s*prefers-color-scheme\s*:\s*dark\s*\)/g, `@media ${mode}`)
+  return forceAppearance(svg, appearance)
     .replace(/(<svg\b[^>]*>)/, `$1\n<rect width="100%" height="100%" fill="${background}"/>`);
 }
 
@@ -52,8 +51,9 @@ async function renderDemo(root, components, themes) {
   await fs.rm(path.join(destination, 'assets'), { recursive: true, force: true });
   let count = 0;
   for (const component of components) {
-    const { assets } = await component.render(themeContext(component, themes[0], true));
-    await writeAssets(assets, destination);
+    const ctx = themeContext(component, themes[0], true);
+    const { assets } = await component.render(ctx);
+    await writeAssets(assets, destination, { appearance: ctx.common.appearance });
     count += assets.length;
   }
   return count;

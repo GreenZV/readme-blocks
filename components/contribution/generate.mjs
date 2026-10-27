@@ -340,7 +340,7 @@ export async function generate(options = contributionOptions(), fetcher = global
   }
   const ctx = context('contribution', options);
   const result = await render(ctx, fetcher, options);
-  await writeAssets(result.assets, ctx.root);
+  await writeAssets(result.assets, ctx.root, { appearance: ctx.common.appearance });
   console.log(`contribution: ${result.assets.length}${ctx.demo ? ' demo' : ''} assets`);
   return result;
 }

@@ -119,7 +119,14 @@ if (isMain(import.meta.url)) await runComponent('message', render);
 `render(ctx)` can be synchronous or async. Its context contains merged `config`,
 resolved `common`, the caller's `root`, the library's `sourceRoot`, and `demo`.
 Return `{ assets: [{ path, svg }] }`, with paths relative to the caller repository.
-Build the complete result before writing any assets. Importing the module must
+Build the complete result before writing any assets. The shared writer also
+creates `.light.svg` and `.dark.svg` siblings from each SVG, preserving animation
+and reduced-motion rules. It honors `common.appearance` (`auto`, `light`, `dark`)
+from the resolved theme settings. `runComponent` passes that setting automatically;
+a manual writer call must pass `{ appearance: ctx.common.appearance }` as its third
+argument. See [appearance and manual integration](appearance.md).
+Keep color-scheme media rules compatible with the
+shared `forceAppearance` helper; see `scripts/lib/appearance.mjs`. Importing the module must
 have no rendering, network, config-initialization, or filesystem-write side effects.
 
 `runComponent` handles the Action environment and local CLI, exclusive creation
@@ -202,8 +209,8 @@ node components/message/generate.mjs --root /tmp/readme-message-example
 
 The first normal run creates
 `/tmp/readme-message-example/.github/readme/components/message.json` and skips
-rendering. Fill its text and run the same command again. It should write only
-`assets/message.svg`, preserving the existing config and any hand-written README.
+rendering. Fill its text and run the same command again. It should write `assets/message.svg`, `assets/message.light.svg` and
+`assets/message.dark.svg`, preserving the existing config and any hand-written README.
 
 ```sh
 node components/message/generate.mjs --demo --theme ocean --root /tmp/readme-message-demo
@@ -217,7 +224,8 @@ for a separate output directory; sources still come from this library checkout.
 
 Verify first-run initialization, normal rendering, demo rendering, monochrome by
 default, all built-in themes, global/component overrides, XML escaping, missing
-or malformed content, long text, and light/dark appearance. If animated, also
+or malformed content, long text, automatic switching, forced light/dark appearance,
+and returning from a forced mode to `auto`. If animated, also
 verify disabled motion and reduced-motion preferences. Check that importing the
 module writes nothing and that it imports neither another component nor `local/`.
 

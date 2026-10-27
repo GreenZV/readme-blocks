@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="175.39999999999998" height="46" viewBox="0 0 175.39999999999998 46" role="img" aria-labelledby="title">
+<title id="title">DEV Community</title>
+<style>
+  .border { fill: none; stroke: #d4d4d4; }
+  .logo { fill: #404040; }
+  .label { fill: #171717; font: 13px Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+  @media all {
+    .border { stroke: #404040; } .logo { fill: #d4d4d4; } .label { fill: #d4d4d4; }
+  }
+</style>
+<rect x=".5" y=".5" width="174.39999999999998" height="45" rx="8" class="border"/>
+<svg x="20" y="12" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><mask id="contact-icon" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22" style="mask-type:alpha"><image width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+ZGV2LnRvPC90aXRsZT48cGF0aCBkPSJNNy40MiAxMC4wNWMtLjE4LS4xNi0uNDYtLjIzLS44NC0uMjNINmwuMDIgMi40NC4wNCAyLjQ1LjU2LS4wMmMuNDEgMCAuNjMtLjA3LjgzLS4yNi4yNC0uMjQuMjYtLjM2LjI2LTIuMiAwLTEuOTEtLjAyLTEuOTYtLjI5LTIuMTh6TTAgNC45NHYxNC4xMmgyNFY0Ljk0SDB6TTguNTYgMTUuM2MtLjQ0LjU4LTEuMDYuNzctMi41My43N0g0LjcxVjguNTNoMS40YzEuNjcgMCAyLjE2LjE4IDIuNi45LjI3LjQzLjI5LjYuMzIgMi41Ny4wNSAyLjIzLS4wMiAyLjczLS40NyAzLjN6bTUuMDktNS40N2gtMi40N3YxLjc3aDEuNTJ2MS4yOGwtLjcyLjA0LS43NS4wM3YxLjc3bDEuMjIuMDMgMS4yLjA0djEuMjhoLTEuNmMtMS41MyAwLTEuNi0uMDEtMS44Ny0uM2wtLjMtLjI4di0zLjE2YzAtMy4wMi4wMS0zLjE4LjI1LTMuNDguMjMtLjMxLjI1LS4zMSAxLjg4LS4zMWgxLjY0djEuM3ptNC42OCA1LjQ1Yy0uMTcuNDMtLjY0Ljc5LTEgLjc5LS4xOCAwLS40NS0uMTUtLjY3LS4zOS0uMzItLjMyLS40NS0uNjMtLjgyLTIuMDhsLS45LTMuMzktLjQ1LTEuNjdoLjc2Yy40IDAgLjc1LjAyLjc1LjA1IDAgLjA2IDEuMTYgNC41NCAxLjI2IDQuODMuMDQuMTUuMzItLjcuNzMtMi4zbC42Ni0yLjUyLjc0LS4wNGMuNC0uMDIuNzMgMCAuNzMuMDQgMCAuMTQtMS42NyA2LjM4LTEuOCA2LjY4eiIvPjwvc3ZnPg==" preserveAspectRatio="xMidYMid meet"/></mask></defs><rect width="22" height="22" class="logo" mask="url(#contact-icon)"/></svg>
+<text x="54" y="27.16" class="label">DEV Community</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="46" viewBox="0 0 158 46" role="img" aria-labelledby="title">
+<title id="title">LeetCode</title>
+<style>
+  .border { fill: none; stroke: #d4d4d4; }
+  .logo { fill: #404040; }
+  .label { fill: #171717; font: 13px Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+  @media not all {
+    .border { stroke: #404040; } .logo { fill: #d4d4d4; } .label { fill: #d4d4d4; }
+  }
+</style>
+<rect x=".5" y=".5" width="157" height="45" rx="8" class="border"/>
+<svg x="30.799999999999997" y="12" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><mask id="contact-icon" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22" style="mask-type:alpha"><image width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TGVldENvZGU8L3RpdGxlPjxwYXRoIGQ9Ik0xMy40ODMgMGExLjM3NCAxLjM3NCAwIDAgMC0uOTYxLjQzOEw3LjExNiA2LjIyNmwtMy44NTQgNC4xMjZhNS4yNjYgNS4yNjYgMCAwIDAtMS4yMDkgMi4xMDQgNS4zNSA1LjM1IDAgMCAwLS4xMjUuNTEzIDUuNTI3IDUuNTI3IDAgMCAwIC4wNjIgMi4zNjIgNS44MyA1LjgzIDAgMCAwIC4zNDkgMS4wMTcgNS45MzggNS45MzggMCAwIDAgMS4yNzEgMS44MThsNC4yNzcgNC4xOTMuMDM5LjAzOGMyLjI0OCAyLjE2NSA1Ljg1MiAyLjEzMyA4LjA2My0uMDc0bDIuMzk2LTIuMzkyYy41NC0uNTQuNTQtMS40MTQuMDAzLTEuOTU1YTEuMzc4IDEuMzc4IDAgMCAwLTEuOTUxLS4wMDNsLTIuMzk2IDIuMzkyYTMuMDIxIDMuMDIxIDAgMCAxLTQuMjA1LjAzOGwtLjAyLS4wMTktNC4yNzYtNC4xOTNjLS42NTItLjY0LS45NzItMS40NjktLjk0OC0yLjI2M2EyLjY4IDIuNjggMCAwIDEgLjA2Ni0uNTIzIDIuNTQ1IDIuNTQ1IDAgMCAxIC42MTktMS4xNjRMOS4xMyA4LjExNGMxLjA1OC0xLjEzNCAzLjIwNC0xLjI3IDQuNDMtLjI3OGwzLjUwMSAyLjgzMWMuNTkzLjQ4IDEuNDYxLjM4NyAxLjk0LS4yMDdhMS4zODQgMS4zODQgMCAwIDAtLjIwNy0xLjk0M2wtMy41LTIuODMxYy0uOC0uNjQ3LTEuNzY2LTEuMDQ1LTIuNzc0LTEuMjAybDIuMDE1LTIuMTU4QTEuMzg0IDEuMzg0IDAgMCAwIDEzLjQ4MyAwem0tMi44NjYgMTIuODE1YTEuMzggMS4zOCAwIDAgMC0xLjM4IDEuMzgyIDEuMzggMS4zOCAwIDAgMCAxLjM4IDEuMzgySDIwLjc5YTEuMzggMS4zOCAwIDAgMCAxLjM4LTEuMzgyIDEuMzggMS4zOCAwIDAgMC0xLjM4LTEuMzgyeiIvPjwvc3ZnPg==" preserveAspectRatio="xMidYMid meet"/></mask></defs><rect width="22" height="22" class="logo" mask="url(#contact-icon)"/></svg>
+<text x="64.8" y="27.16" class="label">LeetCode</text>
+</svg>

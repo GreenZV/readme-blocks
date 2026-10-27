@@ -85,6 +85,12 @@ Use a branch when starting a manual run as well.
 
 Source modules use only Node.js built-ins. No Action imports another component,
 the local full builder, preview code, or personal configs.
+Each rendered SVG also gets `.light.svg` and `.dark.svg` sibling files from the
+same render. Use the component page's `<picture>` example for GitHub theme
+selection in the default `appearance: auto` mode. Set `appearance` to `light` or
+`dark` in the fixed global/component theme configs to force a mode; no additional
+Action input is needed. All three files then use the chosen appearance, so the
+same markup works. See [appearance settings and manual integration](appearance.md).
 README layout and clickable links always remain hand-edited.
 
 ## Write-back and failed runs

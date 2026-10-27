@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="46" viewBox="0 0 158 46" role="img" aria-labelledby="title">
+<title id="title">GitHub</title>
+<style>
+  .border { fill: none; stroke: #d4d4d4; }
+  .logo { fill: #404040; }
+  .label { fill: #171717; font: 13px Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+  @media not all {
+    .border { stroke: #404040; } .logo { fill: #d4d4d4; } .label { fill: #d4d4d4; }
+  }
+</style>
+<rect x=".5" y=".5" width="157" height="45" rx="8" class="border"/>
+<svg x="38.6" y="12" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><defs><mask id="contact-icon" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22" style="mask-type:alpha"><image width="22" height="22" href="data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0SHViPC90aXRsZT48cGF0aCBkPSJNMTIgLjI5N2MtNi42MyAwLTEyIDUuMzczLTEyIDEyIDAgNS4zMDMgMy40MzggOS44IDguMjA1IDExLjM4NS42LjExMy44Mi0uMjU4LjgyLS41NzcgMC0uMjg1LS4wMS0xLjA0LS4wMTUtMi4wNC0zLjMzOC43MjQtNC4wNDItMS42MS00LjA0Mi0xLjYxQzQuNDIyIDE4LjA3IDMuNjMzIDE3LjcgMy42MzMgMTcuN2MtMS4wODctLjc0NC4wODQtLjcyOS4wODQtLjcyOSAxLjIwNS4wODQgMS44MzggMS4yMzYgMS44MzggMS4yMzYgMS4wNyAxLjgzNSAyLjgwOSAxLjMwNSAzLjQ5NS45OTguMTA4LS43NzYuNDE3LTEuMzA1Ljc2LTEuNjA1LTIuNjY1LS4zLTUuNDY2LTEuMzMyLTUuNDY2LTUuOTMgMC0xLjMxLjQ2NS0yLjM4IDEuMjM1LTMuMjItLjEzNS0uMzAzLS41NC0xLjUyMy4xMDUtMy4xNzYgMCAwIDEuMDA1LS4zMjIgMy4zIDEuMjMuOTYtLjI2NyAxLjk4LS4zOTkgMy0uNDA1IDEuMDIuMDA2IDIuMDQuMTM4IDMgLjQwNSAyLjI4LTEuNTUyIDMuMjg1LTEuMjMgMy4yODUtMS4yMy42NDUgMS42NTMuMjQgMi44NzMuMTIgMy4xNzYuNzY1Ljg0IDEuMjMgMS45MSAxLjIzIDMuMjIgMCA0LjYxLTIuODA1IDUuNjI1LTUuNDc1IDUuOTIuNDIuMzYuODEgMS4wOTYuODEgMi4yMiAwIDEuNjA2LS4wMTUgMi44OTYtLjAxNSAzLjI4NiAwIC4zMTUuMjEuNjkuODI1LjU3QzIwLjU2NSAyMi4wOTIgMjQgMTcuNTkyIDI0IDEyLjI5N2MwLTYuNjI3LTUuMzczLTEyLTEyLTEyIi8+PC9zdmc+" preserveAspectRatio="xMidYMid meet"/></mask></defs><rect width="22" height="22" class="logo" mask="url(#contact-icon)"/></svg>
+<text x="72.6" y="27.16" class="label">GitHub</text>
+</svg>

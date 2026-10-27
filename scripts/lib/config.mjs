@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { appearanceAssets, validateAppearance } from './appearance.mjs';
 import { constants, existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -9,6 +10,7 @@ export const escapeXml = value => String(value).replaceAll('&', '&amp;').replace
 export const loadJson = filename => JSON.parse(readFileSync(filename, 'utf8'));
 export function validateShared(common) {
   if (common.schemaVersion !== 1) throw new Error('Unsupported shared config schemaVersion');
+  validateAppearance(common.appearance);
   for (const [key, value] of Object.entries(common.layout || {})) {
     if (!Number.isFinite(value) || value <= 0) throw new Error(`Shared layout.${key} must be positive`);
   }
@@ -195,8 +197,8 @@ export function actionOptions(env = process.env) {
   return { root, demo, theme: env.INPUT_THEME?.trim() || 'monochrome' };
 }
 
-export async function writeAssets(assets, root = ROOT) {
-  for (const asset of assets) {
+export async function writeAssets(assets, root = ROOT, { appearance = 'auto' } = {}) {
+  for (const asset of appearanceAssets(assets, appearance)) {
     const destination = path.resolve(root, asset.path);
     await fs.mkdir(path.dirname(destination), { recursive: true });
     await fs.writeFile(destination, asset.svg);
@@ -216,6 +218,6 @@ export async function runComponent(name, render) {
   }
   const ctx = context(name, options);
   const result = await render(ctx);
-  await writeAssets(result.assets, ctx.root);
+  await writeAssets(result.assets, ctx.root, { appearance: ctx.common.appearance });
   console.log(`${name}: ${result.assets.length} assets`);
 }

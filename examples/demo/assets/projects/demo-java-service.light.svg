@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="210" viewBox="0 0 430 210" role="img" aria-labelledby="title desc">
+<title id="title">Java Service</title>
+<desc id="desc">A sample backend API with persistence and a containerized deployment. Built with: Java, Spring, PostgreSQL. Status: In development.</desc><style>
+  text { font-family: Menlo, Consolas, &quot;Liberation Mono&quot;, monospace; }
+
+  .title { fill: #262626; font-size: 14px; }
+  .body { fill: #171717; font-size: 13px; }
+  .muted { fill: #626262; font-size: 11px; }
+  .tool { fill: #262626; font-size: 12px; }
+  .category { fill: #626262; font-size: 11px; }
+  .label { fill: #171717; font-size: 14px; }
+  .notes { fill: #626262; font-size: 12px; }
+  .logo { fill: #404040; }
+  .border, .divider { stroke: #d4d4d4; }
+  @media not all {
+  .title { fill: #e5e5e5; }
+  .body { fill: #d4d4d4; }
+  .muted { fill: #a3a3a3; }
+  .tool { fill: #e5e5e5; }
+  .category { fill: #a3a3a3; }
+  .label { fill: #d4d4d4; }
+  .notes { fill: #a3a3a3; }
+  .logo { fill: #d4d4d4; }
+  .border, .divider { stroke: #404040; }
+  }
+</style><style>.project-status{font-size:11px}.project-status{fill:#171717}.project-marker{fill:#262626}@media not all{.project-status{fill:#d4d4d4}.project-marker{fill:#e5e5e5}} </style>
+<rect x=".5" y=".5" width="429" height="209" rx="8" fill="none" class="border"/>
+<text x="20" y="28" class="muted">01 / DEMO</text>
+<circle cx="299.9" cy="24" r="3" class="project-marker"/><text x="410" y="28" text-anchor="end" class="project-status">In development</text>
+<text x="20" y="58" class="title">&gt; Java Service</text>
+<text x="20" y="88" class="body">A sample backend API with persistence and a</text>
+<text x="20" y="108" class="body">containerized deployment.</text>
+<path d="M20 148H410" class="divider"/>
+<text x="20" y="172" class="tool">Java / Spring / PostgreSQL</text>
+<text x="20" y="194" class="muted">view project -&gt;</text>
+</svg>

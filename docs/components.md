@@ -28,7 +28,12 @@ Theme overrides are discovered at `.github/readme/theme.json` and
 `.github/readme/themes/<component>.json`. The built-in theme defaults to
 monochrome. Data and theme file paths cannot be passed as workflow inputs.
 
-The renderer returns SVG assets. README text, layout, and links remain hand-edited;
+The renderer returns adaptive SVG assets. The shared writer derives explicit
+`.light.svg` and `.dark.svg` variants without another render or network request.
+By default, `common.appearance` is `auto`; README `<picture>` sources select those
+variants for the active GitHub theme. The writer receives the resolved appearance
+and pins all output filenames to the selected palette in `light` or `dark` mode.
+See [appearance configuration and the manual writer API](appearance.md). README text, layout, and links remain hand-edited;
 component builds never generate or replace a consumer README. The `examples/demo/`
 directory contains a complete consumer example, workflow, and generated assets.
 Each component's Markdown page demonstrates every built-in theme in both appearances.

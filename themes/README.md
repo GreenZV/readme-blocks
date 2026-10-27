@@ -15,7 +15,8 @@
 
 Every theme includes light and dark palettes. Each component's [documentation
 page](../README.md#components) shows all themes in both appearances. Production
-SVGs remain transparent and switch with `prefers-color-scheme`.
+SVGs remain transparent. The default `appearance: auto` generates both appearances
+for automatic switching with README `<picture>` markup.
 
 ## Choose a theme
 
@@ -30,6 +31,28 @@ Omit `theme` in the workflow for `monochrome`. To select another built-in palett
 
 A data config or override file cannot select a built-in theme. Theme selection
 belongs to the workflow's `theme` input.
+
+## Choose light, dark, or automatic display
+
+This is separate from the named color palette. The default is `appearance: auto`;
+no config is required. To pin every component to one appearance, add this at the
+top level of `.github/readme/theme.json`:
+
+```json
+{
+  "appearance": "dark"
+}
+```
+
+Accepted values are `auto`, `light`, and `dark`. Use the same key in
+`.github/readme/themes/<component>.json` to override one component. Other color
+and rendering overrides in these files are preserved. This setting is not a
+workflow input and does not belong inside the `themes` color object.
+
+In `auto`, use `<picture>` to select the explicit light/dark output for the GitHub
+theme. In fixed modes, all output filenames contain the chosen appearance, so
+the same markup continues to work. See [appearance configuration](../docs/appearance.md)
+for the markup, direct single-image alternatives and manual generation examples.
 
 ## Automatic overrides
 
@@ -48,7 +71,7 @@ The resolution order is rendering defaults → selected built-in theme (otherwis
 monochrome) → global fixed-path overrides → component fixed-path overrides.
 Explicit overrides can recolor the monochrome base without changing its name.
 Objects merge recursively; arrays, including activity scales, replace the whole
-array. Overrides may adjust typography, layout and motion, as well as colors.
+array. Overrides may adjust appearance, typography, layout and motion, as well as colors.
 
 Example `.github/readme/theme.json`:
 

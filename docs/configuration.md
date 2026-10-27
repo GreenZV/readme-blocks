@@ -162,3 +162,14 @@ normal profiles. Full configurations remain supported.
 Colors and shared typography/layout/motion overrides use the separate
 [fixed theme paths](../themes/README.md). The built-in theme remains monochrome
 unless another is selected in the workflow.
+
+## Light and dark display
+
+Appearance is separate from content and named color palettes. The default is
+`auto`, generating both appearances for README `<picture>` switching. Set
+`"appearance": "light"` or `"appearance": "dark"` in `.github/readme/theme.json`
+to pin all components; `.github/readme/themes/<component>.json` overrides one.
+Use `"appearance": "auto"` to restore switching. Add this key alongside existing
+settings, outside `themes`, and leave component content configs unchanged.
+See [appearance configuration and manual integration](appearance.md) for output
+behavior and ready-to-copy README markup.
